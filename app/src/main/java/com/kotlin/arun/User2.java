@@ -9,4 +9,5 @@ import android.databinding.ObservableField;
 public class User2 {
     public final ObservableField<String> name = new ObservableField<>();
     public final ObservableField<Integer> age = new ObservableField<>();
+    public final ObservableField<String> imageUrl = new ObservableField<>();
 }

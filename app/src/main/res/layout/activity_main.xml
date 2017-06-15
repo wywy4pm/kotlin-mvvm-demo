@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,6 +9,10 @@
         <import type="java.util.ArrayList" />
 
         <import type="com.kotlin.arun.Main2Activity" />
+
+        <import type="android.support.v7.widget.LinearLayoutManager" />
+
+        <import type="com.kotlin.arun.MyListAdapter" />
 
         <variable
             name="user"
@@ -21,6 +26,13 @@
             name="main"
             type="Main2Activity" />
 
+        <variable
+            name="layoutManager"
+            type="LinearLayoutManager" />
+
+        <variable
+            name="adapter"
+            type="MyListAdapter" />
     </data>
 
     <LinearLayout
@@ -28,7 +40,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -40,11 +52,22 @@
             android:gravity="center"
             android:text="@{String.valueOf(((User2)userList.get(0)).age)}" />
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:imageUrl="@{((User2)userList.get(0)).imageUrl}" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{main.onClick}"
-            android:text="点击" />
+            android:text="点击" />-->
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{adapter}"
+            app:layoutManager="@{layoutManager}" />
     </LinearLayout>
 
 </layout>
