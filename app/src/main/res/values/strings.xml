@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">KotlinProject</string>
+    <string name="app_name">85mm</string>
+    <string name="text_not_network">请检查网络连接是否正常</string>
+    <string name="text_exit_app">再按一次返回键退出</string>
+    <string name="works_all_count">收录：%1$d</string>
+    <string name="works_browse_count">浏览：%1$d</string>
+    <string name="works_download_count_all">下载：%1$d</string>
+    <string name="works_download_count_one">%1$d次下载</string>
+
+    <string name="query_one_day_left_works">查看 %1$s 剩余 %2$d 套作品</string>
+    <string name="one_day_left_works_title">%1$s   (%2$d套作品)</string>
+    <string name="share_title">85mm</string>
+    <string name="share_description">我在85mm等你。这里都是人像摄影爱好者</string>
+    <string name="share_url">http://a.app.qq.com/o/simple.jsp?pkgname=com.arun.a85mm</string>
+    <string name="wechat_num">hello85mm</string>
+
+    <string name="main_tab_1">最新</string>
+    <string name="main_tab_2">最热</string>
+    <string name="main_tab_3">文章</string>
+
+    <!--网络请求异常情况-->
+    <string name="net_error">网络异常</string>
+    <string name="net_error_system">系统异常</string>
+    <string name="net_error_data_format">数据解析异常</string>
+
+    <string name="android">android</string>
+
+    <string name="read_origin">查看原文</string>
+    <string name="report">举报</string>
+    <string name="scale_over">尺度有点大</string>
+    <string name="bad_comment">差评</string>
+    <string name="repeat">和其他作品重复</string>
+    <string name="show_seq">图片显示有问题</string>
+    <string name="recommend_new">推荐到最新频道</string>
+    <string name="cancel">取消</string>
 </resources>

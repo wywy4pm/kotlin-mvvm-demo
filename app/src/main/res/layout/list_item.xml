@@ -4,9 +4,9 @@
 
     <data>
 
-        <import type="com.kotlin.arun.User2" />
+        <import type="com.kotlin.arun.bean.User2" />
 
-        <import type="com.kotlin.arun.MyListAdapter" />
+        <import type="com.kotlin.arun.adapter.MyListAdapter" />
 
         <variable
             name="user"

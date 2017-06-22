@@ -4,15 +4,13 @@
 
     <data>
 
-        <import type="com.kotlin.arun.User2" />
+        <import type="com.kotlin.arun.bean.User2" />
 
         <import type="java.util.ArrayList" />
 
-        <import type="com.kotlin.arun.Main2Activity" />
-
         <import type="android.support.v7.widget.LinearLayoutManager" />
 
-        <import type="com.kotlin.arun.MyListAdapter" />
+        <import type="com.kotlin.arun.adapter.MyListAdapter" />
 
         <variable
             name="user"
@@ -21,10 +19,6 @@
         <variable
             name="userList"
             type="ArrayList" />
-
-        <variable
-            name="main"
-            type="Main2Activity" />
 
         <variable
             name="layoutManager"

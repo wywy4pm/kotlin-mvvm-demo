@@ -1,8 +1,9 @@
-package com.kotlin.arun
+package com.kotlin.arun.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.kotlin.arun.R
 
 class MainActivity : AppCompatActivity() {
     var a: Int = 0
