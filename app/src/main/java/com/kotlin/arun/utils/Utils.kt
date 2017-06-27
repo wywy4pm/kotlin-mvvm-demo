@@ -1,6 +1,5 @@
 package com.kotlin.arun.utils
 
-import android.content.Context
 import android.databinding.BindingAdapter
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -17,27 +16,31 @@ import com.bumptech.glide.request.target.Target
  */
 
 class Utils {
+    companion object {
 
-    @BindingAdapter("imageUrl")
-    fun loadImage(imageView: ImageView, imageUrl: String) {
-        Glide.with(imageView.context).load(imageUrl).listener(object : RequestListener<String, GlideDrawable> {
-            override fun onException(e: Exception, model: String, target: Target<GlideDrawable>, isFirstResource: Boolean): Boolean {
-                return false
-            }
+        @BindingAdapter("imageUrl")
+        fun loadImage(imageView: ImageView, imageUrl: String) {
+            Glide.with(imageView.context).load(imageUrl).listener(object : RequestListener<String, GlideDrawable> {
+                override fun onException(e: Exception, model: String, target: Target<GlideDrawable>, isFirstResource: Boolean): Boolean {
+                    return false
+                }
 
-            override fun onResourceReady(resource: GlideDrawable, model: String, target: Target<GlideDrawable>, isFromMemoryCache: Boolean, isFirstResource: Boolean): Boolean {
-                return false
-            }
-        }).diskCacheStrategy(DiskCacheStrategy.SOURCE).centerCrop().into(imageView)
+                override fun onResourceReady(resource: GlideDrawable, model: String, target: Target<GlideDrawable>, isFromMemoryCache: Boolean, isFirstResource: Boolean): Boolean {
+                    return false
+                }
+            }).diskCacheStrategy(DiskCacheStrategy.SOURCE).centerCrop().into(imageView)
+        }
+
+        @BindingAdapter("layoutManager")
+        fun setLinearLayoutManager(recyclerView: RecyclerView, layoutManager: LinearLayoutManager) {
+            recyclerView.layoutManager = layoutManager
+        }
+
+        @BindingAdapter("adapter")
+        fun setAdapter(recyclerView: RecyclerView, adapter: RecyclerView.Adapter<*>) {
+            recyclerView.adapter = adapter
+        }
     }
 
-    @BindingAdapter("layoutManager")
-    fun setLinearLayoutManager(recyclerView: RecyclerView, layoutManager: LinearLayoutManager) {
-        recyclerView.layoutManager = layoutManager
-    }
 
-    @BindingAdapter("adapter")
-    fun setAdapter(recyclerView: RecyclerView, adapter: RecyclerView.Adapter<*>) {
-        recyclerView.adapter = adapter
-    }
 }

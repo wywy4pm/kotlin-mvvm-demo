@@ -1,18 +1,25 @@
 package com.kotlin.arun.activity
 
+import android.databinding.DataBindingUtil
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
+import android.widget.Toast
+import com.kotlin.arun.R
 import com.kotlin.arun.adapter.MyListAdapter
 import com.kotlin.arun.bean.User2
+import com.kotlin.arun.databinding.ActivityMainBinding
 
-class Main2Activity : android.support.v7.app.AppCompatActivity() {
-    private var list: java.util.ArrayList<User2>? = null
-    private var binding: com.kotlin.arun.databinding.ActivityMainBinding? = null
+class Main2Activity : AppCompatActivity() {
+    private var list: ArrayList<User2>? = null
+    private var binding: ActivityMainBinding? = null
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main);
-        binding = android.databinding.DataBindingUtil.setContentView<com.kotlin.arun.databinding.ActivityMainBinding>(this, com.kotlin.arun.R.layout.activity_main)
-        list = java.util.ArrayList<User2>()
+        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        list = ArrayList<User2>()
         for (i in 0..9) {
             val user = User2()
             user.name.set("aaaaa")
@@ -23,14 +30,14 @@ class Main2Activity : android.support.v7.app.AppCompatActivity() {
         binding!!.userList = list
         //binding.setMain(this);
 
-        val layoutManager = android.support.v7.widget.LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding!!.layoutManager = layoutManager
         val listAdapter = MyListAdapter(list!!)
         binding!!.adapter = listAdapter
     }
 
-    fun onClick(view: android.view.View) {
-        android.widget.Toast.makeText(this, "点击事件", android.widget.Toast.LENGTH_SHORT).show()
+    fun onClick(view: View) {
+        Toast.makeText(this, "点击事件", Toast.LENGTH_SHORT).show()
         changeText()
     }
 

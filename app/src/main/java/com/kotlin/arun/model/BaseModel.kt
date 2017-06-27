@@ -3,7 +3,6 @@ package com.kotlin.arun.model
 import com.google.gson.JsonParseException
 import com.google.gson.JsonSyntaxException
 import com.kotlin.arun.R
-import com.kotlin.arun.bean.ArticleListBean
 import com.kotlin.arun.bean.CommonApiResponse
 import com.kotlin.arun.common.ErrorCode
 import com.kotlin.arun.listener.CommonRequestListener

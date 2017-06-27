@@ -11,6 +11,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'x86'
+        }
     }
     buildTypes {
         release {
@@ -24,6 +28,9 @@ android {
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        /*main {
+            jniLibs.srcDirs = ['libs']
+        }*/
     }
 }
 
@@ -47,6 +54,11 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     compile 'io.reactivex:rxandroid:1.1.0'
     kapt 'com.android.databinding:compiler:2.2.3'
+
+    compile 'com.amap.api:3dmap:latest.integration'
+    //compile 'com.amap.api:navi-3dmap:latest.integration'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'com.amap.api:location:latest.integration'
 }
 repositories {
     mavenCentral()
