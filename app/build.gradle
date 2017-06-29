@@ -16,10 +16,29 @@ android {
             abiFilters 'armeabi-v7a', 'x86'
         }
     }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'arun'
+            keyPassword '123456'
+            storeFile file("kotlin_arun.jks")
+            storePassword '123456'
+        }
+        debug {
+            keyAlias 'arun'
+            keyPassword '123456'
+            storeFile file('kotlin_arun.jks')
+            storePassword '123456'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.releaseConfig
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.debug
         }
     }
 
