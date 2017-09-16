@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     var c = "s = $s"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main)
         /* var a = sum(10, 20)
          var b = sum2(20, 30)
          println(a)
@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }  """
+
+
     }
 
     fun Utils.count(a: Int, b: Int): Int {

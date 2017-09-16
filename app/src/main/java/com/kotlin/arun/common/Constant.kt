@@ -6,6 +6,7 @@ package com.kotlin.arun.common
 object Constant {
 
     val API_BASE_URL = "http://api.link365.cn:38888"
+    val BASE_URL = "https://api.douban.com"
 
     /**
      * intent key
